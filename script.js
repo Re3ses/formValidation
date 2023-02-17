@@ -6,15 +6,17 @@ function validate() {
 
     if (pass.length > 8 && age > 21) {
         document.getElementById('msg').innerText = "Hooray! You account has been succesfuly created";
-        document.getElementById('p-error').innerText = "";
-        document.getElementById('b-error').innerText = "";
     }
     if (pass.length < 8) {
         document.getElementById('p-error').innerText = "password must be at least 8 characters";
+    } else {
+        document.getElementById('p-error').innerText = "";
     }
     if (age < 21) {
         document.getElementById("b-error").innerText = "You must be at least 21 years old to proceed";
-    } 
+    } else {
+        document.getElementById('b-error').innerText = "";
+    }
     
     return false;
 }
